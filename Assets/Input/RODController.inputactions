@@ -6,15 +6,6 @@
             "id": "bdd3edf9-8470-4e9b-8059-8ff6dbbc1979",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "8745459b-b3fe-4fe6-8d5a-555a2e0aed60",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Move",
                     "type": "Value",
                     "id": "bdb3d4bc-4e48-4e6b-a1d8-12616e2f56b2",
@@ -22,20 +13,18 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "170c624d-b4d3-4c41-a225-2d6f2fa84851",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "d1e9a50a-dd18-4788-8833-fef8bde6d592",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2D Vector",
                     "id": "6c93f4ea-4185-4160-8d82-83a3e2ccfcd3",
@@ -90,6 +79,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c3487506-1313-413a-8bac-6f50012ff9fc",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
