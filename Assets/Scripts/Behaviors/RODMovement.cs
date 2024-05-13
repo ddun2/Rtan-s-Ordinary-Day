@@ -23,6 +23,7 @@ public class RODMovement : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovement(movementDirection);
+        Debug.Log("Move");
     }
 
     private void ApplyMovement(Vector2 direction)
