@@ -8,7 +8,7 @@ public class ChangeName : MonoBehaviour
     [SerializeField] private InputField inputName;
     [SerializeField] private GameObject nameChangeUI;
     private GameObject player;
-    private Text name;    
+    private Text playerName;    
 
     private void Update()
     {
@@ -27,8 +27,8 @@ public class ChangeName : MonoBehaviour
         PlayerPrefs.SetString("PlayerName", inputName.text);
         // 태그로 찾은 플레이어 오브젝트의 자식에 접근하기
         player = GameObject.FindWithTag("Player");
-        name = player.transform.GetChild(1).GetChild(0).GetComponent<Text>();
-        name.text = inputName.text;
+        playerName = player.GetComponentInChildren<Text>();
+        playerName.text = inputName.text;
 
         nameChangeUI.SetActive(false);
     }    

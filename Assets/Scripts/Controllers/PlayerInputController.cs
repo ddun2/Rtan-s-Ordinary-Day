@@ -3,11 +3,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputController : RODController
 {
-    private Camera camera;
+    private Camera _camera;
 
     private void Awake()
     {
-        camera = Camera.main;
+        _camera = Camera.main;
     }
 
     public void OnMove(InputValue value)
@@ -19,7 +19,7 @@ public class PlayerInputController : RODController
     public void OnLook(InputValue value)
     {
         Vector2 aim = value.Get<Vector2>();
-        Vector2 worldPos = camera.ScreenToWorldPoint(aim);
+        Vector2 worldPos = _camera.ScreenToWorldPoint(aim);
         aim = (worldPos - (Vector2)transform.position).normalized;
 
         CallLookEvent(aim);

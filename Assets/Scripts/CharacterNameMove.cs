@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterNameMove : MonoBehaviour
-{    
-    private GameObject playerName; 
-
+{
+    private Text playerName; 
+    
     private void Start()
-    {        
+    {
         // 자식 오브젝트에 접근하기
-        playerName = transform.GetChild(1).GetChild(0).gameObject;
+        playerName = GetComponentInChildren<Text>();               
     }
     private void Update()
     {
