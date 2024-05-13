@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
-{
-    //[SerializeField] private Transform player;
-    Transform GameObject;
+{    
+    GameObject player;
 
-    private void Awake()
+    private void Start()
     {
-        // TODO :: 나중에 프리팹별로 수정 남자 여자
-        GameObject = GameManager.instance.character_Male.transform;
+        // 태그로 플레이어 찾기
+        player = GameObject.FindWithTag("Player");
     }
 
     private void FixedUpdate()
     {
-        Vector3 playerPos = new Vector3(GameObject.position.x, GameObject.position.y, this.transform.position.z);
+        Vector3 playerPos = new Vector3(player.transform.position.x, player.transform.position.y, this.transform.position.z);
         transform.position = playerPos;
     }
 }

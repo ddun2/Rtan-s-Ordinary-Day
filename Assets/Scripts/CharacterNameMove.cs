@@ -4,20 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterNameMove : MonoBehaviour
-{
-    //[SerializeField] private Text playerName;
-    private GameObject Name; 
-    private Text playerName;
+{    
+    private GameObject playerName; 
 
     private void Start()
-    {
-        Name = transform.GetChild(1).GetChild(0).gameObject;
-        //playerName = Name.GetComponent<Text>();
-        Debug.Log(Name.name);
-        
+    {        
+        // 자식 오브젝트에 접근하기
+        playerName = transform.GetChild(1).GetChild(0).gameObject;
     }
     private void Update()
     {
-       Name.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, -1.0f, 0));
+       playerName.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, -1.0f, 0));
     }
 }

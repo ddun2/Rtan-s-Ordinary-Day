@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class SelectCharacter : MonoBehaviour
 {
-    [SerializeField] private GameObject selectUI;
+    [SerializeField] protected GameObject selectUI;
     public Sprite femaleImage;
     public Sprite maleImage;
     private Image currentImage;
-    // Start is called before the first frame update
+    
     void Start()
     {
         currentImage = GetComponent<Image>();
     }
-
-    // Update is called once per frame
+        
     void Update()
     {
+        // 인덱스에 따라 이미지 변경
         if (PlayerPrefs.GetInt("SelectionIndex") == 0)
         {
             currentImage.sprite = maleImage;
@@ -31,6 +31,7 @@ public class SelectCharacter : MonoBehaviour
 
     public void PrintSelectUI()
     {
+        // 캐릭터 선택 UI 활성화
         selectUI.SetActive(true);
     }
 }
