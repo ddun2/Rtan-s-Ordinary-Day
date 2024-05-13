@@ -21,7 +21,7 @@ public class ChangeName : MonoBehaviour
             GetComponent<Button>().interactable = false;
         }
     }
-    
+    // TODO :: 이름 변경 중에 캐릭터 조작 안되도록 수정하기
     public void NameChange()
     {
         PlayerPrefs.SetString("PlayerName", inputName.text);

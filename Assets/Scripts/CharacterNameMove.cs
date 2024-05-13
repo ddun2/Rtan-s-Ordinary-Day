@@ -14,6 +14,6 @@ public class CharacterNameMove : MonoBehaviour
     }
     private void Update()
     {
-       playerName.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, -1.0f, 0));
+        playerName.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, -1.0f, 0));
     }
 }
