@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     private void Awake()
     {
         // TODO :: 나중에 프리팹별로 수정 남자 여자
-        GameObject = GameManager.instance.playerMale.transform;
+        GameObject = GameManager.instance.character_Male.transform;
     }
 
     private void FixedUpdate()

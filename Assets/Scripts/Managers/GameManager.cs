@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject playerMale;
+    public GameObject character_Male;
     public GameObject character_Female;
+    //public GameObject player;
     [SerializeField] private Text playerName;
+
+    //public int index;
 
     private void Awake()
     {
@@ -20,13 +23,32 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        playerName.text = PlayerPrefs.GetString("PlayerName");
+        //playerName.text = PlayerPrefs.GetString("PlayerName");
+        
+        //index = PlayerPrefs.GetInt("SelectionIndex");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("DF");  
+        if(PlayerPrefs.GetInt("SelectionIndex") == 0)
+        {
+            GameObject player = Instantiate(character_Male);
+        }
+        else if(PlayerPrefs.GetInt("SelectionIndex") == 1)
+        {
+            GameObject player = Instantiate(character_Female);
+        }
+        
+        //switch (index)
+        //{
+        //    case 0:
+        //        player = Instantiate(character_Male);
+        //        break;
+        //    case 1:
+        //        player = Instantiate(character_Male);
+        //        break;
+        //}
     }
 
     // Update is called once per frame
