@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {    
-    GameObject player;
+    static GameObject player;
 
     private void Start()
     {
         // 태그로 플레이어 찾기
+        player = GameObject.FindWithTag("Player");
+    }
+
+    public static void SetPlayer()
+    {
         player = GameObject.FindWithTag("Player");
     }
 

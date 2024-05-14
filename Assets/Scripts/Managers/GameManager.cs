@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject Characters;
+    [SerializeField] protected GameObject Characters;
     public static GameManager instance;
     public GameObject character_Male;
     public GameObject character_Female;

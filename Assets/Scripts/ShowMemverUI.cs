@@ -19,6 +19,8 @@ public class ShowMemverUI : MonoBehaviour
         // 캐릭터 이름 변경 후에도 적용시키기 위해
         // 버튼 클릭 시 nameList 초기화
         // TODO :: 새로고침 버튼 만들기
+
+        printName.text = "";
         nameList = characters.GetComponentsInChildren<Text>();
         for(int i = 0; i < nameList.Length; i++)
         {
